@@ -1,58 +1,106 @@
 <!doctype html>
-<html>
-  <head>
+<html data-ng-app="app" data-ng-controller="mainCtrl">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Gdgboulder.github.io by GDGBoulder</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-resource.js"></script>
+    <script src="javascripts/main.js"></script>
     <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!--[if lt IE 8]>
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/GDGBoulder">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
+</head>
+<body>
+<div id="header">
+    <nav>
+        <li class="viewproject"><a href="https://github.com/GDGBoulder">View On GitHub</a></li>
+        <li class="gplus"><a href="https://plus.google.com/u/0/b/110545238773247324753/110545238773247324753">Google
+            Plus Page</a></li>
+        <li class="groups"><a href="https://groups.google.com/d/forum/gdgboulder">Google Group</a></li>
+        <li class="projects"><a href="http://projects.gdgboulder.org">Project Page</a></li>
+    </nav>
+</div>
+<!-- end header -->
 
-    <div class="wrapper">
+<div class="wrapper">
 
-      <section>
+    <section>
         <div id="title">
-          <h1>Gdgboulder.github.io</h1>
-          <p>The github pages page for GDG Boulder</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/GDGBoulder">GDGBoulder</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+            <h1>GDG Boulder</h1>
+
+            <p>The GDG Boulder Information and Project Page</p>
+
         </div>
 
-        <h3>
-<a name="welcome-to-the-gdg-boulder-page" class="anchor" href="#welcome-to-the-gdg-boulder-page"><span class="octicon octicon-link"></span></a>Welcome to The GDG Boulder Page</h3>
+        <h1>
+            <a name="welcome-to-the-gdg-boulder-page" class="anchor" href="#welcome-to-the-gdg-boulder-page">
+                Welcome to The GDG Boulder Page
+            </a>
+        </h1>
+        <hr>
 
-<p>This page is in progress contact <a href="mailto:gdgboulder@gmail.com">gdgboulder@gmail.com</a> if you want to contribute content.</p>
-      </section>
+        <p>Welcome to the GDG Boulder page, this area will be automatically updated with the groups project repositories
+            below using the github api.</p>
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-44594296-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
 
-  </body>
+        <hr>
+        <h2>
+            <a name="project-list" class="anchor" href="#project-list">Projects</a></h2>
+
+        <div id="projectlist">
+            <article data-ng-cloak data-ng-repeat="project in projects">
+                <projectlist data-project="project"></projectlist>
+            </article>
+        </div>
+
+        <div class="spacer"> &nbsp; </div>
+        <hr>
+
+        <h2>
+            Contributors:
+        </h2>
+        <div id="contributors">
+             this area isn't done, please do something cool here :)
+        </div>
+
+        <div class="spacer"> &nbsp; </div>
+        <hr>
+        <h2>
+            Sign Up for Github Access
+        </h2>
+        <div id="signup">
+            <iframe src="https://docs.google.com/forms/d/14WJmfgeyffD-QYzspaR5rAEz-FjfK1-aKQVk-v01Ukg/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </div>
+
+    </section>
+
+</div>
+<footer>
+    <hr>
+    <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+</footer>
+<!--[if !IE]>
+<script>fixScale(document);</script><![endif]-->
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-44594296-1");
+        pageTracker._trackPageview();
+    } catch (err) {
+    }
+</script>
+
+</body>
 </html>
